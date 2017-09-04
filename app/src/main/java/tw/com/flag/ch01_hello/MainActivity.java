@@ -1,25 +1,13 @@
 package tw.com.flag.ch01_hello;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-// 11111
-// 11111
-// 11111
-// 11111
 public class MainActivity extends AppCompatActivity {
 
     int age = 12 ;
-    private PowerManager.WakeLock mWakeLock;
-    private PowerManager mPowerManager = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,27 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         age = 3 ;
-        age = 13 ;
-        age = 23 ;
-        age = 33 ;
+
         A.a("11111111111111111111111111111");
-        mPowerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        mWakeLock = mPowerManager.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "tag");
-        mWakeLock.acquire();
-        A.a("22222222222222222222222222222");
-        // SLEEP 2 SECONDS HERE ...
-        final Handler handler = new Handler();
-        Timer t = new Timer();
-        t.schedule(new TimerTask() {
-            public void run() {
-                handler.post(new Runnable() {
-                    public void run() {
-                        A.a("5555555555555555555555555555555555555555");
-                        mWakeLock.release();
-                    }
-                });
-            }
-        }, 2000);
 
 
     }

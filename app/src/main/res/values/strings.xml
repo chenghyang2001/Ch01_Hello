@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Ch01_Hello 1a</string>
+    <string name="app_name">1 Ch01_Hello</string>
 
-    <string name="hello_world">Hello world 2a!</string>
-    <string name="action_settings">Settings 3a</string>
+    <string name="hello_world">2 Hello world!</string>
+
+    <string name="action_settings">3 Settings</string>
 </resources>
